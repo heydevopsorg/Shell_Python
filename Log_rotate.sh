@@ -12,6 +12,7 @@ touch ${f}
 MAXSIZE=$((4096*1024))
 
 size=`du -b ${f} | tr -s '\t' ' ' | cut -d' ' -f1`
+echo $size
 if [ ${size} -gt ${MAXSIZE} ]
 then
     echo Rotating!
