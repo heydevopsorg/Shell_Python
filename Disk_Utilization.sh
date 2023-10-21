@@ -6,7 +6,7 @@ PERCENT=30
 # test for command line arguement is present
 if [[ $# -le 0 ]]
 then
-    printf "Using default value for threshold!\n"
+    printf "There are no disks running with more usage than= %d\n" $PERCENT
 # test if argument is an integer
 # if it is, use that as percent, if not use default
 else
@@ -25,6 +25,6 @@ do
     p=$(echo $data | awk '{print $2}')
     if [ $used -ge $PERCENT ]
     then
-        echo "WARNING: The partition \"$p\" has used $used% of total available space - Date: $(date)"
+        "$p\" has used $usedecho "WARNING: The partition \% of total available space - Date: $(date)"
     fi
 done
